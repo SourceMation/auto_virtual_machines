@@ -1,0 +1,1 @@
+dnf install -y --setopt=tsflags=nodocs --allowerasing ca-certificates procps wget java-1.8.0-openjdk-headless
