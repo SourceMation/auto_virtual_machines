@@ -1,3 +1,5 @@
+Change language: [ENG](README.md) | [PL](README_PL.md)
+
 # SourceMation auto_virtual_machines
 This repo contains scripts for creating virtual machine images.  
 Here we are using packer(packer.io) with the following plugins  
