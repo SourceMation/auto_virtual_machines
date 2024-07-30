@@ -17,15 +17,24 @@ elif [ $STAGE -eq 2 ]; then
     base)
         export IMAGE_FULL="el-release" ;;
     mogodb)
-        export IMAGE_FULL="mongodb-enterprise" ;;
+        export IMAGE_FULL="mongodb-enterprise"
+        export BOXRELEASE="${BOXRELEASE}.*"
+        ;;
     postgresql)
-        export IMAGE_FULL="postgresql-server" ;;
+        export IMAGE_FULL="postgresql-server"
+        export BOXRELEASE="${BOXRELEASE}.*"
+        ;;
     python)
-        export IMAGE_FULL="$IMAGE$(echo $BOXRELEASE|grep -oE ^[0-9])" ;;
+        export IMAGE_FULL="$IMAGE$(echo $BOXRELEASE|grep -oE ^[0-9])"
+        export BOXRELEASE="${BOXRELEASE}.*"
+        ;;
     rabbitmq)
-        export IMAGE_FULL="rabbitmq-server" ;;
-    *)
-        export IMAGE_FULL=$IMAGE ;;
+        export IMAGE_FULL="rabbitmq-server"
+        export BOXRELEASE="${BOXRELEASE}.*"
+        ;;
+    *)  export IMAGE_FULL="$IMAGE"
+        export BOXRELEASE="${BOXRELEASE}.*"
+        ;;
     esac
 
     bash -x smoke_test_${PACKER_BUILDER_SHORT}.sh

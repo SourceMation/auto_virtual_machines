@@ -1,1 +1,1 @@
-dnf install -y python3-3.9.18
+dnf install -y python3

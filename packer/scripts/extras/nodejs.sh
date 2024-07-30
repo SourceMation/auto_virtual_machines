@@ -1,1 +1,1 @@
-dnf install -y nodejs-16.20.2
+dnf install -y nodejs-16.*
