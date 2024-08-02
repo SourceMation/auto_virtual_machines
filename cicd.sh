@@ -16,6 +16,9 @@ elif [ $STAGE -eq 2 ]; then
     case "$IMAGE" in
     base)
         export IMAGE_FULL="el-release" ;;
+    java)
+        export IMAGE_FULL="$IMAGE"
+        ;;
     mogodb)
         export IMAGE_FULL="mongodb-enterprise"
         export BOXRELEASE="${BOXRELEASE}.*"
