@@ -19,7 +19,7 @@ elif [ $STAGE -eq 2 ]; then
     java)
         export IMAGE_FULL="$IMAGE"
         ;;
-    mogodb)
+    mongodb)
         export IMAGE_FULL="mongodb-enterprise"
         export BOXRELEASE="${BOXRELEASE}.*"
         ;;
