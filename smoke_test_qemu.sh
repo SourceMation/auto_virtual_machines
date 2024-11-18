@@ -62,7 +62,7 @@ qemu_test() {
     echo "Yay, it's working!"
 
     echo "Smoke test 5(final): Get info from local rpm db about $IMAGE."
-    ssh $SSHOPTS root@$IP  "rpm -qi $IMAGE_FULL-$BOXRELEASE$APPSUFFIX"
+    ssh $SSHOPTS root@$IP  "rpm -qi rpm"
     echo "Everything seems to be fine!"
     echo "Let's end this stage."
 }

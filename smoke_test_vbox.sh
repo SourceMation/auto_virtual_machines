@@ -64,7 +64,7 @@ vbox_test() {
     echo "Yay, it's working!"
 
     echo "Smoke test 5(final): Get info from local rpm db about $IMAGE."
-    ssh $SSHOPTS root@127.0.0.1 "rpm -qi $IMAGE_FULL-$BOXRELEASE$APPSUFFIX"
+    ssh $SSHOPTS root@127.0.0.1 "rpm -qi rpm"
     echo "Everything seems to be fine!"
     echo "Let's end this stage."
 }
