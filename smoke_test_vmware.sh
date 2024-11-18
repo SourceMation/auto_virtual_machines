@@ -23,7 +23,7 @@ vmware_convert() {
 }
 
 vmware_run() {
-    vmrun -T ws -gu root -gp eurolinux start test/$VM.vmx nogui
+    vmrun -T ws -gu root -gp sourcemation start test/$VM.vmx nogui
 }
 
 vmware_check_tools() {
@@ -42,7 +42,7 @@ vmware_add_ssh_key() {
     ssh-keygen -t ed25519 -f ssh_smoketest_key -C "smoketest@vboxbuilder" -N ''
     SMOKETESTKEY_PUB=$(cat ssh_smoketest_key.pub)
 
-    sshpass -p eurolinux \
+    sshpass -p sourcemation \
     ssh $SSHOPTS \
     root@$IP \
     /bin/echo \
@@ -60,8 +60,8 @@ vmware_test() {
     ssh $SSHOPTS root@$IP uname -a >/dev/null 2>&1
     echo "Yes, it does."
 
-    echo "Smoke test 3: Can it read https://repo.eurolinux.local/?"
-    ssh $SSHOPTS root@$IP curl -k https://repo.eurolinux.local/ >/dev/null 2>&1
+    echo "Smoke test 3: Can it read https://www.google.com/?"
+    ssh $SSHOPTS root@$IP curl -k https://www.google.com/ >/dev/null 2>&1
     echo "Yes, it can."
 
     echo "Smoke test 4: How about using repolist?"

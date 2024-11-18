@@ -67,7 +67,7 @@ source "qemu" "libvirt" {
   qemuargs           = [["-cpu", "host"], ["-smp", "2"]]
   shutdown_command   = "/sbin/halt -h -p"
   shutdown_timeout   = "2m30s"
-  ssh_password       = "eurolinux"
+  ssh_password       = "sourcemation"
   ssh_port           = 22
   ssh_timeout        = "2h"
   ssh_username       = "root"
@@ -98,7 +98,7 @@ source "virtualbox-iso" "virtualbox" {
   output_directory        = "../../workspace/packer-el9-x86_64-virtualbox"
   shutdown_command        = "/sbin/halt -h -p"
   shutdown_timeout        = "2m30s"
-  ssh_password            = "eurolinux"
+  ssh_password            = "sourcemation"
   ssh_port                = 22
   ssh_timeout             = "2h"
   ssh_username            = "root"
@@ -129,7 +129,7 @@ source "vmware-iso" "vmware_workstation" {
   ovftool_options     = ["--noImageFiles", "--noNvramFile", "--compress=3"]
   shutdown_command    = "/sbin/halt -h -p"
   shutdown_timeout    = "2m30s"
-  ssh_password        = "eurolinux"
+  ssh_password        = "sourcemation"
   ssh_port            = 22
   ssh_timeout         = "2h"
   ssh_username        = "root"

@@ -37,7 +37,7 @@ vbox_add_ssh_key() {
     ssh-keygen -t ed25519 -f ssh_smoketest_key -C "smoketest@vboxbuilder" -N ''
     SMOKETESTKEY_PUB=$(cat ssh_smoketest_key.pub)
 
-    sshpass -p eurolinux \
+    sshpass -p sourcemation \
     ssh $SSHOPTS \
     root@127.0.0.1 \
     /bin/echo \
@@ -55,8 +55,8 @@ vbox_test() {
     ssh $SSHOPTS root@127.0.0.1 uname -a >/dev/null 2>&1
     echo "Yes, it does."
 
-    echo "Smoke test 3: Can it read https://repo.eurolinux.local/?"
-    ssh $SSHOPTS root@127.0.0.1 curl -k https://repo.eurolinux.local/ >/dev/null 2>&1
+    echo "Smoke test 3: Can it read https://www.google.com/?"
+    ssh $SSHOPTS root@127.0.0.1 curl -k https://www.google.com/ >/dev/null 2>&1
     echo "Yes, it can."
 
     echo "Smoke test 4: How about using repolist?"
