@@ -11,3 +11,4 @@ EOF
 
 # Install the MongoDB packages
 dnf install -y mongodb-org
+systemctl enable mongod

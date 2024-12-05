@@ -11,3 +11,4 @@ sslverify=0
 EOT
 
 dnf install -y rabbitmq-server-3.*
+systemctl enable rabbitmq-server
