@@ -1,1 +1,2 @@
-dnf install -y nodejs-16.*
+dnf module enable -y nodejs:22
+dnf install -y nodejs npm
