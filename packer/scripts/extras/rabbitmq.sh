@@ -9,8 +9,8 @@ tee /etc/yum.repos.d/rabbitmq.repo > /dev/null <<EOT
 name=modern-erlang-el9
 # Use a set of mirrors maintained by the RabbitMQ core team.
 # The mirrors have significantly higher bandwidth quotas.
-baseurl=https://yum1.rabbitmq.com/erlang/el/9/$basearch
-        https://yum2.rabbitmq.com/erlang/el/9/$basearch
+baseurl=https://yum1.rabbitmq.com/erlang/el/9/\$basearch
+        https://yum2.rabbitmq.com/erlang/el/9/\$basearch
 enabled=1
 gpgkey=https://github.com/rabbitmq/signing-keys/releases/download/3.0/cloudsmith.rabbitmq-erlang.E495BB49CC4BBE5B.key
 gpgcheck=1
@@ -61,8 +61,8 @@ autorefresh=1
 
 [rabbitmq-el9]
 name=rabbitmq-el9
-baseurl=https://yum2.rabbitmq.com/rabbitmq/el/9/$basearch
-        https://yum1.rabbitmq.com/rabbitmq/el/9/$basearch
+baseurl=https://yum2.rabbitmq.com/rabbitmq/el/9/\$basearch
+        https://yum1.rabbitmq.com/rabbitmq/el/9/\$basearch
 enabled=1
 # Cloudsmith's repository key and RabbitMQ package signing key
 gpgkey=https://github.com/rabbitmq/signing-keys/releases/download/3.0/cloudsmith.rabbitmq-server.9F4587F226208342.key
